@@ -45,6 +45,7 @@ public class VendingMachine {
 
 	/**
 	 * Generate a vending machine instance
+	 * 
 	 * @return A new Vending Machine instance
 	 */
 	public static VendingMachine create() {
@@ -75,10 +76,12 @@ public class VendingMachine {
 	public long getCookiesServed() {
 		return cookiesServed.get();
 	}
-	
+
 	/**
 	 * Buy a x number of cookies from the machine
-	 * @param units The number of cookies to buy
+	 * 
+	 * @param units
+	 *            The number of cookies to buy
 	 * @return If you are able to buy them or not, depends on availability
 	 */
 	public boolean getCookies(final long units) {
@@ -98,7 +101,9 @@ public class VendingMachine {
 
 	/**
 	 * Buy a x number of candy bars from the machine
-	 * @param units The number of candy bars to buy
+	 * 
+	 * @param units
+	 *            The number of candy bars to buy
 	 * @return If you are able to buy them or not, depends on availability
 	 */
 	public boolean getCandyBars(final long units) {
