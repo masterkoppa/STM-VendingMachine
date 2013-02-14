@@ -19,6 +19,17 @@ public abstract class Person {
 		service =  Executors.newScheduledThreadPool(10);
 	}
 	
+	/**
+	 * Generic method to create a Runnable request for things from the vending machine
+	 * 
+	 * 
+	 * @param cookies True for cookies, false for candy
+	 * @param sucessMessage The message to print on success
+	 * @param failureMessage The message to print on failure
+	 * @param amount The amount that we want
+	 * 
+	 * @return The build runnable object following the standard procedure specified in the document.
+	 */
 	public Runnable createRequest(final boolean cookies, final String sucessMessage, final String failureMessage, final int amount){
 		return new Runnable() {
 	        public void run() {
@@ -42,6 +53,9 @@ public abstract class Person {
 	        };
 	}
 	
+	/**
+	 * Shutdown the executor service and vending machine
+	 */
 	public void shutdown(){
 		try {
 			service.awaitTermination(1, TimeUnit.SECONDS);

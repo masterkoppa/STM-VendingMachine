@@ -7,6 +7,7 @@ public class WillieWonka extends Person{
 	public WillieWonka(VendingMachine vending) {
 		super(vending);
 		
+		//Set up the schedule
 		new Thread(new Runnable(){
 			public void run(){
 				Random r = new Random();

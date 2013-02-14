@@ -6,6 +6,7 @@ public class CookieMonster extends Person{
 	public CookieMonster(VendingMachine vending) {
 		super(vending);
 		
+		//Set up the schedule
 		new Thread(new Runnable(){
 			public void run(){
 				for(int i = 0; i < 15; i++){

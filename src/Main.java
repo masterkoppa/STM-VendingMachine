@@ -15,12 +15,13 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.Future;
 import java.util.concurrent.ExecutionException;
 
-public class UseEnergySource {
+public class Main {
   private static final VendingMachine vendingMachine = VendingMachine.create();
     
   public static void main(final String[] args) 
     throws InterruptedException, ExecutionException {
     
+	  //Start up all the persons in this simulation
 	  new CookieMonster(vendingMachine);
 	  new WillieWonka(vendingMachine);
 	  new FatAlbert(vendingMachine);

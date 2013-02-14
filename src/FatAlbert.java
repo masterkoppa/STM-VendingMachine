@@ -7,6 +7,7 @@ public class FatAlbert extends Person{
 	public FatAlbert(VendingMachine vending) {
 		super(vending);
 		
+		//Set up the schedule
 		new Thread(new Runnable(){
 			public void run(){
 				Random r = new Random();
@@ -36,6 +37,11 @@ public class FatAlbert extends Person{
 		
 	}
 
+	/**
+	 * Same purpose as the super class method with the same name, but
+	 * modified for Fat Alberts special requests.
+	 * @return
+	 */
 	public Runnable createRequest(){
 		return new Runnable() {
 	        public void run() {
